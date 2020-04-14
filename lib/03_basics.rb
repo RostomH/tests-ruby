@@ -1,18 +1,13 @@
-# def who_is_bigger(a, b, c)
-#   array = [a, b, c]
-#   if array.any?{|i| i.nil?} == true
-#     return "nil detected"
-#   else
-#     return "#{array.max} is bigger"
-#   end
-# end
 
-def who_is_bigger(a, b, c)
-  hash = {"x" => a, "y" => b, "z" => c}
-  if hash.any?{|k,v| v.nil?} == true
+def who_is_bigger(a,b,c)
+  if [a,b,c].include?(nil)
     return "nil detected"
-  else
-    return "#{hash.max_by(&:last).last} is bigger"
+  elsif ([a,b,c].max) == a
+    return "a is bigger"
+  elsif ([a,b,c].max) == b
+    return "b is bigger"
+  elsif ([a,b,c].max) == c
+    return "c is bigger"
   end
 end
 

@@ -15,7 +15,15 @@ def start_of_word(string,i)
   return string[0..i-1]
 end
 
-puts start_of_word("hello",2)
+def first_word(string)
+  return string.split.first
+end
+
+def capitalize(string)
+  return string.string.scan(/\w+/)
+end
+
+
 
 
 
